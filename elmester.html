@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/elmester.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <script defer src="js/elmester.js"></script>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"> -->
     <title>ELMester Achevements</title>
   </head>
   <body>
@@ -15,7 +15,7 @@
         <div class="header-content">
           <span class="logo">ELMester Site</span>
           <ul class="m-links">
-            <li><a href="#">Home</a></li>
+            <li><a class="active" href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Port</a></li>
             <li><a href="#">Contact</a></li>
@@ -27,5 +27,19 @@
         </div>
       </div>
       </div>
+      <!-- Setting Box -->
+      <div class="setting">
+        <div class="icon"><i class="fa fa-cogs"></i></div>
+        <div class="content">
+          <ul class="uls">
+            <li class="active" data-color="#4285f4"></li>
+            <li data-color="#ea4335"></li>
+            <li data-color="#fbbc05"></li>
+            <li data-color="#34a853"></li>
+          </ul>
+        </div>
+      </div>
+
+      <script src="js/elmester.js"></script>
   </body>
 </html>

@@ -1,9 +1,13 @@
 :root {
-    --main-color: #E54C3B;
+    --main-color: #4285f4;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    height: 2000px;
 }
+
+/* Landing Page */
 .land-page {
     background-image: url(../imgs/1.png);
     background-size: cover;
@@ -47,7 +51,8 @@ body {
     text-decoration: none;
     transition: .2s;
 }
-.header-content .m-links li a:hover {
+.header-content .m-links li a:hover,
+.header-content .m-links li a.active {
     color: var(--main-color);
 }
 .txt-intro {
@@ -68,3 +73,58 @@ body {
     line-height: 1.5;
     margin-top: 30px;
 }
+
+/* Setting Box */
+.setting {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: -200px;
+    width: 200px;
+    min-height: 50vh;
+    background-color: #000;
+    color: #FFF;
+    z-index: 10;
+    transition: .5s;
+}
+.setting.open {
+    left: 0;
+}
+.setting .icon {
+    color: #000;
+    background-color: #FFF;
+    position: absolute;
+    right: -40px;
+    top: 130px;
+    cursor: pointer;
+}
+.setting .icon i {
+    padding: 10px;
+}
+.setting .uls {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.setting .uls li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    border-radius: 50%;
+    opacity: .5;
+    cursor: pointer;
+}
+.setting .uls li:nth-of-type(1){
+    background-color: #4285f4;
+}
+.setting .uls li:nth-of-type(2){
+    background-color: #ea4335;
+}
+.setting .uls li:nth-of-type(3){
+    background-color: #fbbc05;
+}
+.setting .uls li:nth-of-type(4){
+    background-color: #34a853;
+}
+.setting .uls li.active {opacity: 1}
