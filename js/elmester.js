@@ -86,6 +86,24 @@ let arrayImgs = ['1.png', '2.png', '3.png'];
 function randomBg(){
         backInterval = setInterval(() => {
             let randomNum = Math.floor(Math.random() * arrayImgs.length);
-            landPage.style.backgroundImage = 'url("imgs/' + arrayImgs[randomNum] + '")';
+            landPage.style.backgroundImage = 'url("images/' + arrayImgs[randomNum] + '")';
         }, 1000)
 }
+
+// Start the skills animation
+let theSkills = document.querySelector('.my-skills');
+
+window.onscroll = function(){
+    let skillOffsetTop = theSkills.offsetTop;
+    let skillsOuterH = theSkills.offsetHeight;
+    let windowHeight = this.innerHeight;
+    let windowScrollTop = this.pageYOffset;
+
+    if(windowScrollTop > (skillOffsetTop + skillsOuterH - windowHeight)){
+        let skillBar = document.querySelectorAll('.skill-box .s-progress span')
+
+        skillBar.forEach(skill => {
+            skill.style.width = skill.dataset.progress;
+        });
+    }
+};
